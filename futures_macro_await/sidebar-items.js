@@ -1,0 +1,1 @@
+initSidebarItems({"macro":[["await","Await a sub-future inside an `#[async]` function."],["await_item","Await an item from a stream inside an `#[async]` function."],["stream_yield","Yield an item from an `#[async_stream]` function."]]});
