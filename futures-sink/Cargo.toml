@@ -14,6 +14,12 @@ The asynchronous `Sink` trait for the futures-rs library.
 std = ["futures-core/std", "futures-channel/std"]
 default = ["std"]
 
+# For building docs only
+docs = ["std", "futures-core/docs", "futures-channel/docs"]
+
 [dependencies]
 futures-core = { path = "../futures-core", version = "0.2.0", default-features = false }
 futures-channel = { path = "../futures-channel", version = "0.2.0", default-features = false }
+
+[package.metadata.docs.rs]
+features = ["docs"]

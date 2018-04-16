@@ -15,5 +15,11 @@ default = ["std"]
 std = ["either/use_std"]
 nightly = []
 
+# For building docs only
+docs = ["std", "nightly"]
+
 [dependencies]
 either = { version = "1.4", default-features = false, optional = true }
+
+[package.metadata.docs.rs]
+features = ["docs"]

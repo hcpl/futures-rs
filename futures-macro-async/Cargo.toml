@@ -23,3 +23,9 @@ default-features = false
 
 [features]
 nightly = ["proc-macro2/nightly"]
+
+# For building docs only
+docs = ["nightly"]
+
+[package.metadata.docs.rs]
+features = ["docs"]

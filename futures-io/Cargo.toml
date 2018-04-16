@@ -14,9 +14,15 @@ The `AsyncRead` and `AsyncWrite` traits for the futures-rs library.
 std = ["futures-core/std", "iovec"]
 default = ["std"]
 
+# For building docs only
+docs = ["std", "futures-core/docs"]
+
 [dependencies]
 futures-core = { path = "../futures-core", version = "0.2.0", default-features = false }
 iovec = { version = "0.1", optional = true }
 
 [dev-dependencies]
 futures = { path = "../futures", version = "0.2.0" }
+
+[package.metadata.docs.rs]
+features = ["docs"]

@@ -21,6 +21,7 @@ use task;
 /// stream (it's valid to keep polling). Thus a stream is somewhat like an
 /// `Iterator<Item = Result<T, E>>`, and is always terminated by returning
 /// `None`.
+#[cfg_attr(feature = "docs", doc(spotlight))]
 pub trait Stream {
     /// Values yielded by the stream.
     type Item;

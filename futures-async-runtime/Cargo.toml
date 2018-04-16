@@ -27,3 +27,9 @@ default-features = false
 nightly = ["futures-core/nightly", "futures-stable/nightly"]
 std = ["futures-core/std", "futures-stable/std"]
 default = ["std"]
+
+# For building docs only
+docs = ["std", "nightly", "futures-core/docs", "futures-stable/docs"]
+
+[package.metadata.docs.rs]
+features = ["docs"]

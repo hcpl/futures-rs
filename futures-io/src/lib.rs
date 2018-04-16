@@ -6,7 +6,9 @@
 
 #![no_std]
 #![deny(missing_docs, missing_debug_implementations)]
-#![doc(html_rnoot_url = "https://docs.rs/futures-io/0.2.0")]
+#![doc(html_root_url = "https://docs.rs/futures-io/0.2.0")]
+
+#![cfg_attr(feature = "docs", feature(doc_spotlight))]
 
 macro_rules! if_std {
     ($($i:item)*) => ($(
@@ -158,6 +160,7 @@ if_std! {
     /// method, unlike `Write::write`, will automatically queue the current task
     /// for wakeup and return if data is not yet available, rather than blocking
     /// the calling thread.
+    #[cfg_attr(feature = "docs", doc(spotlight))]
     pub trait AsyncWrite {
         /// Attempt to write bytes from `buf` into the object.
         ///

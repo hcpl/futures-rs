@@ -1,6 +1,7 @@
 #![no_std]
 #![cfg_attr(feature = "nightly", feature(arbitrary_self_types))]
 #![cfg_attr(feature = "nightly", feature(pin))]
+#![cfg_attr(feature = "docs", feature(doc_spotlight))]
 
 macro_rules! if_nightly {
     ($($i:item)*) => ($(
@@ -35,6 +36,7 @@ if_nightly! {
         use unsafe_pin::UnsafePin;
     }
 
+    #[doc(spotlight)]
     pub trait StableFuture {
         type Item;
         type Error;
@@ -65,6 +67,7 @@ if_nightly! {
         }
     }
 
+    #[doc(spotlight)]
     pub trait StableStream {
         type Item;
         type Error;

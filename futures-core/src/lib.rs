@@ -6,6 +6,7 @@
 
 #![cfg_attr(feature = "nightly", feature(cfg_target_has_atomic))]
 #![cfg_attr(feature = "nightly", feature(pin))]
+#![cfg_attr(feature = "docs", feature(doc_spotlight))]
 
 #[macro_use]
 #[cfg(feature = "std")]

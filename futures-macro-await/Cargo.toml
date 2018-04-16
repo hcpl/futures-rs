@@ -13,3 +13,9 @@ futures = { path = "../futures" }
 
 [features]
 nightly = ["futures/nightly"]
+
+# For building docs only
+docs = []
+
+[package.metadata.docs.rs]
+features = ["docs"]

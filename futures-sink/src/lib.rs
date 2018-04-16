@@ -7,6 +7,8 @@
 #![deny(missing_docs, missing_debug_implementations)]
 #![doc(html_root_url = "https://docs.rs/futures-sink/0.2.0")]
 
+#![cfg_attr(feature = "docs", feature(doc_spotlight))]
+
 #[cfg(feature = "std")]
 extern crate std;
 
@@ -121,6 +123,7 @@ if_std! {
 /// higher-level way. The `Sink::send_all` combinator is of particular
 /// importance: you can use it to send an entire stream to a sink, which is
 /// the simplest way to ultimately consume a stream.
+#[cfg_attr(feature = "docs", doc(spotlight))]
 pub trait Sink {
     /// The type of value that the sink accepts.
     type SinkItem;

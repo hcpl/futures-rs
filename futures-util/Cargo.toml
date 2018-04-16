@@ -15,6 +15,9 @@ std = ["futures-core/std", "futures-io/std", "futures-sink/std", "either/use_std
 default = ["std", "futures-core/either"]
 bench = []
 
+# For building docs only
+docs = ["std", "futures-core/docs", "futures-channel/docs", "futures-io/docs", "futures-sink/docs"]
+
 [dependencies]
 futures-core = { path = "../futures-core", version = "0.2.0", default-features = false }
 futures-channel = { path = "../futures-channel", version = "0.2.0", default-features = false }
@@ -26,3 +29,6 @@ either = { version = "1.4", default-features = false }
 futures = { path = "../futures", version = "0.2.0" }
 futures-executor = { path = "../futures-executor", version = "0.2.0" }
 futures-channel = { path = "../futures-channel", version = "0.2.0" }
+
+[package.metadata.docs.rs]
+features = ["docs"]

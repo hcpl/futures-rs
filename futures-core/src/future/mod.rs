@@ -44,6 +44,7 @@ mod either;
 /// scheduling a number of callbacks. As with iterators, the combinators are
 /// zero-cost: they compile away. You can find the combinators in the
 /// [future-util](https://docs.rs/futures-util) crate.
+#[cfg_attr(feature = "docs", doc(spotlight))]
 pub trait Future {
     /// A successful value
     type Item;

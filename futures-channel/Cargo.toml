@@ -14,9 +14,15 @@ Channels for asynchronous communication using futures-rs.
 std = ["futures-core/std"]
 default = ["std"]
 
+# For building docs only
+docs = ["std", "futures-core/docs"]
+
 [dependencies]
 futures-core = { path = "../futures-core", version = "0.2.0", default-features = false }
 
 [dev-dependencies]
 futures = { path = "../futures", version = "0.2.0", default-features = true }
 futures-executor = { path = "../futures-executor", version = "0.2.0", default-features = true }
+
+[package.metadata.docs.rs]
+features = ["docs"]
